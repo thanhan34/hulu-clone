@@ -1,7 +1,6 @@
 .header {
   display: flex;
   color: white;
-  background-color: black;
   overflow-x: scroll;
   padding: 20px;
   align-items: center;
