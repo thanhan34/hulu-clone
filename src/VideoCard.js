@@ -7,7 +7,7 @@ const VideoCard = forwardRef(({ movie }, ref) => {
     return (
         <div ref={ref} className="videoCard">
             <img src={`${base_Url}${movie.backdrop_path || movie.poster_path}`} alt="" />
-
+            <h2>{movie.title || movie.original_name}</h2>
             <TextTruncate
                 line={2}
                 element="p"
@@ -15,7 +15,7 @@ const VideoCard = forwardRef(({ movie }, ref) => {
                 text={movie.overview}
             />
 
-            <h2>{movie.title || movie.original_name}</h2>
+
             <p className="videoCard__stats">
                 {
                     movie.media_type && `${movie.media_type} •  `
@@ -23,7 +23,7 @@ const VideoCard = forwardRef(({ movie }, ref) => {
                 {
                     movie.release_date || movie.first_air_date
                 } •
-                <ThumbUpSharpIcon /> {" "}
+                <ThumbUpSharpIcon /> {"    "}
                 {movie.vote_count}
             </p>
         </div>

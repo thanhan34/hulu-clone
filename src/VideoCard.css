@@ -4,11 +4,13 @@
   height: 400px;
   padding: 20px;
   transition: transform 100ms;
+  flex: 30%;
+  max-width: 30%;
 }
 .videoCard > img {
   height: 300px;
   object-fit: contain;
-  width: 500px;
+  width: 100%;
 }
 
 .videoCard:hover {
@@ -16,10 +18,25 @@
 }
 .videoCard > h2 {
   padding-top: 10px;
+  font-size: 1.2rem;
 }
 .videoCard__stats {
   display: none;
 }
 .videoCard:hover > .videoCard__stats {
   display: inline;
+}
+@media screen and (max-width: 1000px) {
+  .videoCard {
+    flex: 48%;
+    max-width: 48%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .videoCard {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
